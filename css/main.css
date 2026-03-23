@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(234, 228, 228);
+}
+
+nav {
+  background-color: rgb(234, 228, 228);
+  box-shadow: 2px rgb(28, 27, 27)
+}
+
+nav ul li a {
+  color: #664980;
+  text-decoration: none;
+}
