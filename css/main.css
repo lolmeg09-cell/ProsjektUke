@@ -37,7 +37,20 @@ nav ul li a:hover {
   padding-top: 13px;
 }
 
+#boks {
+  background-color: #d57eb9;
+  max-width: 800px;
+  max-height: fit-content;
+  margin: 50px auto; 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
+#innhold {
+  justify-content: center;
+  display: flex;
+}
 
 
 
