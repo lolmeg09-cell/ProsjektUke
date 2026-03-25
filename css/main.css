@@ -5,6 +5,9 @@ body {
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   align-items: center;
   display: flex;
@@ -53,6 +56,22 @@ nav ul li a:hover {
   display: flex;
 }
 
+#skrift_forside {
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: #664980;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+#button {
+  display: flex;
+  gap: 20px; 
+}
 
 
 
