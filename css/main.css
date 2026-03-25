@@ -105,7 +105,7 @@ nav ul li a:hover {
 
 #quiz_container {
  background-color: #d57eb9;
- box-shadow: 2px 2px 10px black;
+ box-shadow: 0px 1px 5px black;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -118,20 +118,27 @@ nav ul li a:hover {
 }
 
 #quiz_container #buttons {
- display: flex;
- flex-wrap: wrap;
- gap: 20px 50px;
- margin: 0px 250px;
- justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .correct {
   background-color: green;
 }
 
+.wrong {
+  background-color: red;
+}
+
 button {
-  padding: 10px 100px;
+  padding: 20px;
   border-radius: 20px;
+  border: none;
+  font-size: 16px;
+  width: 100%;
 }
 
 h1 {
@@ -144,6 +151,8 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
+
+
 
 
 
