@@ -68,6 +68,12 @@ nav ul li a:hover {
   border-radius: 30px;
 }
 
+.btn:hover {
+  background-color: #664980;
+  color: white;
+  cursor: pointer;
+}
+
 #button {
   display: flex;
   gap: 20px; 
