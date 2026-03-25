@@ -141,6 +141,16 @@ button {
   width: 100%;
 }
 
+#next button {
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+#next {
+  padding: 20px;
+}
+
 h1 {
   color: #664980;
   text-align: center;
