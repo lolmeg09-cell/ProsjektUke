@@ -81,6 +81,11 @@ nav ul li a:hover {
 
 #skrift_forside {
   line-height: 1.5;
+  padding-bottom: 30px;
+}
+
+#boks{
+  text-align: center;
 }
 
 h2 {
@@ -196,6 +201,7 @@ p {
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
   padding: 20px;
+  padding-top: 40px;
 }
 
 .videoBox {
@@ -337,8 +343,16 @@ h1 {
   border-top: 5px solid #d57eb9;
 }
 
-p h1 h2 {
+h1, h2 {
   font-family: "berlin";
+}
+
+ul li a {
+  font-family: "berlin";
+}
+
+p {
+  font-family: sans-serif;
 }
 
 
