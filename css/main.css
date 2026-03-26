@@ -337,10 +337,15 @@ h1 {
   border-top: 5px solid #d57eb9;
 }
 
+p h1 h2 {
+  font-family: "berlin";
+}
 
 
-
-
+@font-face {
+  font-family: "berlin";
+  src: url(../Fonts/berlin-sans-fb-demi/BRLNSDB.TTF);
+}
 
 
 
