@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(135deg, #f7f5f8, #efe7f3);
+  background-color: #f7f5f8;
   margin: 0;
 }
 
@@ -13,10 +13,18 @@ html, body {
   flex-direction: column;
 }
 
+#startScreen {
+  text-align: center;
+  margin-top: 50px;
+}
 
+#nameInput {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
 
 nav {
-  background: linear-gradient(135deg, #f7f5f8, #efe7f3);
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -24,6 +32,7 @@ nav {
 }
 
 #nav_top {
+  background: linear-gradient(135deg, #f7f5f8, #efe7f3);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
@@ -33,6 +42,8 @@ nav {
 #nav_bottom {
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
   background: linear-gradient(135deg, #f7f5f8, #efe7f3);
+  font-family: "berlin";
+  color: #664980;
 }
 
 #nav_bunn_forside {
@@ -109,7 +120,7 @@ h2 {
   cursor: pointer;
 }
 
-#button {
+#button_forside {
   display: flex;
   justify-content: center;
   gap: 30px; 
@@ -168,12 +179,32 @@ button {
   border: none;
   font-size: 16px;
   width: 100%;
+  background-color: #d57eb9;
+  color: white;
+}
+
+button:hover {
+  background-color: #664980;
+}
+
+.correct:hover {
+  background-color: rgb(86, 228, 86);
+}
+
+.wrong:hover{
+  background-color: rgb(255, 82, 82) ;
 }
 
 #next button {
+  background-color: #d57eb9;
+  color: white;
   padding: 15px 30px;
   border-radius: 20px;
   font-size: 16px;
+}
+
+#next button:hover {
+  background-color: #664980;
 }
 
 #next {
@@ -323,7 +354,7 @@ h1 {
   margin-top: 30px;
   padding: 25px;
   border-radius: 12px;
-  background-color:#f3eef6;
+  background-color:#f7f5f8;
 }
 
 #grafisk_wrap p {
@@ -361,5 +392,16 @@ p {
   src: url(../Fonts/berlin-sans-fb-demi/BRLNSDB.TTF);
 }
 
+#quiz_btn {
+  width: 200px;
+  border-radius: 50px;
+}
 
+#btn_quiz_boks {
+  padding-top: 30px;
+}
+
+#h2_quiz {
+  padding-bottom: 10px;
+}
 

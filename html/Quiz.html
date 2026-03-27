@@ -25,11 +25,21 @@
 
 <h1>Quiz!</h1>
 
+<div id="startScreen">
+  <h2 id="h2_quiz">Skriv inn navnet ditt</h2>
+  <input type="text" id="nameInput" placeholder="Navn">
+  <div id="btn_quiz_boks">
+  <button id="quiz_btn" onclick="startQuiz()">Start quiz</button>
+  </div>
+</div>
+
+
+
 <div id="wrapper_quiz">
 
   
   
-  <div id="quiz_container">
+  <div id="quiz_container" style="display: none;">
     <h2 id="question"></h2>
     <div id="video"></div>
     <div id="buttons"></div>
