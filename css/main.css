@@ -150,7 +150,7 @@ h2 {
  max-width: 80%;
  min-width: 50%;
  border-radius: 20px;
- padding-bottom: 0px;
+ padding-bottom: 20px;
 
  /* margin: 0px 200px; */
 }
@@ -225,17 +225,21 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 #videoContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 20px;
+  display: flex;
+  justify-content: center;
   padding: 20px;
   padding-top: 40px;
+  width: 500px;
+  margin: 0 auto; 
 }
 
 .videoBox {
+  display: flex;
+  justify-content: center;
   background-color: white;
   border-radius: 12px;
   padding: 15px;
@@ -246,8 +250,13 @@ p {
 }
 
 .video video {
-  width: 100%;
-  border-radius: 10px;
+  max-width: 500px;
+  border-radius: 12px;
+  margin: 0px auto;
+}
+
+#quiz_container, #video {
+  padding-bottom: 30px;
 }
 
 #lilla, #rosa {
@@ -393,7 +402,7 @@ p {
 }
 
 #quiz_btn {
-  width: 200px;
+  width: 180px;
   border-radius: 50px;
 }
 
@@ -405,3 +414,73 @@ p {
   padding-bottom: 10px;
 }
 
+#typografi_boks {
+  display: flex;
+  justify-content: center;
+}
+
+#elephant  {
+  padding-right: 150px;
+  
+}
+
+#berlin {
+  padding-left: 150px;
+}
+
+#tekst_1 {
+  font-family:"elephant" ;
+}
+
+#tekst_2 {
+  font-family:"berlin" ;
+  padding-right: 50px;
+}
+
+@font-face {
+  font-family: "elephant";
+  src: url(../Fonts/berlin-sans-fb-demi/Elephant\ Regular/);
+}
+
+.highscore-box {
+  background: linear-gradient(135deg, #f7f5f8, #efe7f3);
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.highscore-box h3 {
+  text-align: center;
+  color: #664980;
+  margin-bottom: 15px;
+}
+
+.highscore-box ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highscore-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.place {
+  font-size: 20px;
+  width: 40px;
+}
+
+.name {
+  flex: 1;
+  text-align: left;
+  padding-left: 10px;
+}

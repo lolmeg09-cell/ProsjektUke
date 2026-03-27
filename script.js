@@ -93,6 +93,7 @@ let quiz = [
   },
   {
     question: "Hvilke av valgene er riktig på hjerte og lungeredning?",
+    video:"../video/PRoduksjonsuke_førstehjelp.mp4",
     choices: [
       { id: 1, label: "A" },
       { id: 2, label: "B" },
@@ -144,28 +145,30 @@ function loadQuestion(index) {
   let feedback = document.getElementById("feedback");
   let nextButton = document.getElementById("next");
   let videoContainer = document.getElementById("video");
-  
 
-if (currentQuestion.video) {
-  videoContainer.innerHTML = `
-    <video src="${currentQuestion.video}" controls width="300"></video>
-  `;
-}
-  
  
   h2.innerHTML = "";
   buttonsContainer.innerHTML = "";
   feedback.textContent = "";
   nextButton.innerHTML = "";
   videoContainer.innerHTML = "";
+
   chosenAnswer = false;
-  
+
  
   h2.innerHTML = currentQuestion.question;
-  
- 
+
+
+  if (currentQuestion.video) {
+    videoContainer.innerHTML += `
+    <iframe src="https://drive.google.com/file/d/1gXde-PX4njLpfX747litFLgOfCEjkabT/preview" width="640" height="480"></iframe>`;
+  }
+
   currentQuestion.choices.forEach(choice => {
-    buttonsContainer.innerHTML += `<button id="btn-${choice.id}" onclick="checkAnswer(${choice.id}, ${currentQuestion.correct})">${choice.label}</button>`;
+    buttonsContainer.innerHTML += `
+      <button id="btn-${choice.id}" onclick="checkAnswer(${choice.id}, ${currentQuestion.correct})">
+        ${choice.label}
+      </button>`;
   });
 }
 function checkAnswer(buttonId, correctAnswer) {
@@ -208,20 +211,30 @@ function showResult() {
   nextButton.innerHTML = `<button onclick="restartQuiz()">Start på nytt</button>`;
 
   saveScore(playerName, score); 
-  showHighscores(); // ✅ FIXED
+  showHighscores(); 
 }
 
 function showHighscores() {
   let highscores = JSON.parse(localStorage.getItem("highscores")) || [];
   let container = document.getElementById("feedback");
 
-  let html = "<h3>Top 5:</h3><ol>";
+  let medals = ["🥇", "🥈", "🥉"];
 
-  highscores.forEach(player => {
-    html += `<li>${player.name} - ${player.score} poeng</li>`;
+  let html = `<div class="highscore-box"><h3>Top 5</h3><ol>`;
+
+  highscores.forEach((player, index) => {
+    let medal = medals[index] || "";
+
+    html += `
+      <li class="highscore-item">
+        <span class="place">${medal || (index + 1)}</span>
+        <span class="name">${player.name}</span>
+        <span class="score">${player.score} poeng</span>
+      </li>
+    `;
   });
 
-  html += "</ol>";
+  html += "</ol></div>";
 
   container.innerHTML = html;
 }
